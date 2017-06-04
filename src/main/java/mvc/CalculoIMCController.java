@@ -37,7 +37,7 @@ public class CalculoIMCController extends HttpServlet {
                 String condicaoIMC = calculoImcModel.condicaoIMC(condicao);
 		//Passa a váriável para a página JSP.
 			if (peso <0 || altura <0 || calcularimc == 0){
-                    condicaoIMC = "IMC inválido! Tente 				    novamente";
+                    condicaoIMC = "IMC inválido! Tente novamente";
                     calcularimc = null;
                     
                 }
