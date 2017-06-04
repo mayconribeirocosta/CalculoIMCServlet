@@ -17,7 +17,7 @@ public class CalculoIMCController extends HttpServlet {
 			HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		//Prepara para a execução.
+		//Prepara para a execuÃ§Ã£o.
 		String alturaStr = request.getParameter("altura");
 		alturaStr = alturaStr == null ? "0" : alturaStr;
 		float altura = Float.parseFloat(alturaStr);
@@ -30,19 +30,19 @@ public class CalculoIMCController extends HttpServlet {
                 String condicaoStr = request.getParameter("condicao");
                 condicaoStr = condicaoStr == null ? "0" : condicaoStr;
                 String condicao = condicaoStr;
-		//Executa "regras de negócio".
+		//Executa "regras de negÃ³cio".
 		CalculoIMCModel calculoImcModel = new CalculoIMCModel(altura,peso);
                 
 		Float calcularimc = calculoImcModel.calcularimc(imc);
                 String condicaoIMC = calculoImcModel.condicaoIMC(condicao);
-		//Passa a váriável para a página JSP.
+		//Passa a vÃ¡riÃ¡vel para a pÃ¡gina JSP.
 			if (peso <0 || altura <0 || calcularimc == 0){
-                    condicaoIMC = "IMC inválido! Tente 				    novamente";
+                    condicaoIMC = "IMC invÃ¡lido! Tente 				    novamente";
                     calcularimc = null;
                     
                 }
 			else if (peso ==0 && altura ==0){
-				condicaoIMC = "O IMC ainda não foi 					calculado!";
+				condicaoIMC = "O IMC ainda nÃ£o foi calculado!";
 				calcularimc = null;
 			}
                 else if (peso >0 || altura>0){
@@ -51,7 +51,7 @@ public class CalculoIMCController extends HttpServlet {
                 }
 		request.setAttribute("calcularimc", calcularimc);
                 request.setAttribute("condicao", condicaoIMC);  
-		//Chama página JSP.
+		//Chama pÃ¡gina JSP.
 		request.getRequestDispatcher("CalculoIMCServlet.jsp").
 			forward(request, response);
                 
