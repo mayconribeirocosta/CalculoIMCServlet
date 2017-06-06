@@ -57,7 +57,7 @@
 
 
 <div class=""alert alert-success" role="alert" >${condicao}</div>
-<div class=""alert alert-success" role="alert" >O IMC é : ${calcularimc}</div> 
+<div class=""alert alert-success" role="alert" >O IMC eh : ${calcularimc}</div> 
    
 </div>
   </body>
