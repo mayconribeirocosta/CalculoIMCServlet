@@ -20,29 +20,39 @@ public class CalculoIMCController extends HttpServlet {
 		//Prepara para a execução.
 		String alturaStr = request.getParameter("altura");
 		alturaStr = alturaStr == null ? "0" : alturaStr;
+		
+		if (alturaStr.contains(",")){
+			alturaStr = alturaStr.replace ("," , ".");
+		}
+		
 		float altura = Float.parseFloat(alturaStr);
-                String pesoStr = request.getParameter("peso");
+		
+		
+        String pesoStr = request.getParameter("peso");
 		pesoStr = pesoStr == null ? "0" : pesoStr;
 		float peso = Float.parseFloat(pesoStr);
 		String imcStr = request.getParameter("imc");
+		
                 imcStr = imcStr == null ? "0" : imcStr;
                 float imc = Float.parseFloat(imcStr);
                 String condicaoStr = request.getParameter("condicao");
                 condicaoStr = condicaoStr == null ? "0" : condicaoStr;
                 String condicao = condicaoStr;
+                
 		//Executa "regras de negócio".
 		CalculoIMCModel calculoImcModel = new CalculoIMCModel(altura,peso);
                 
-		Float calcularimc = calculoImcModel.calcularimc(imc);
-                String condicaoIMC = calculoImcModel.condicaoIMC(condicao);
+		Float calcularimc = calculoImcModel.calcularimc();
+		String condicaoIMC = calculoImcModel.condicaoIMC(imc);
+		
 		//Passa a váriável para a página JSP.
 			if (peso <0 || altura <0 || calcularimc == 0){
-                    condicaoIMC = "IMC inválido! Tente novamente";
+                    condicaoIMC = "IMC invalido! Tente novamente";
                     calcularimc = null;
                     
                 }
 			else if (peso ==0 && altura ==0){
-				condicaoIMC = "O IMC ainda não foi calculado!";
+				condicaoIMC = "O IMC ainda nao foi calculado!";
 				calcularimc = null;
 			}
                 else if (peso >0 || altura>0){
