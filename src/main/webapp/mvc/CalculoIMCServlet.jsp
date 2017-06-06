@@ -24,12 +24,12 @@
 
         <div class="Peso">
         <label for="peso" class"sr-only">Peso</label>
-        <input type="text" name="peso" class="form-control" placeholder="Digite o peso" required autofocus/>
+        <input type="number" min=0 name="peso" class="form-control"   placeholder="Digite o peso" required autofocus/>
         
 
         <div class="Altura">
         <label for="atura" class"sr-only">Altura</label>
-       <input type="text"  name="altura" class="form-control" placeholder="Digite a altura" required/>
+       <input type="number" min=0 step=any name="altura" class="form-control"  placeholder="Digite a altura" required/>
         
 
         <div class="Sexo">
@@ -40,20 +40,11 @@
         <br>
         <button class="btn btn-sm btn-primary">Calcular</button>
         <p>
-        
-        
-        
-
-          
+                    
         </fieldset>
-
-
-
- 
  
         </div>
-       
-       
+              
       </form>
   
    </body>
@@ -63,7 +54,7 @@
 
 
 <div class=""alert alert-success" role="alert" >${condicao}</div>
-<div class=""alert alert-success" role="alert" >O IMC é : ${calcularimc}</div> 
+<div class=""alert alert-success" role="alert" >O IMC Ã© : ${calcularimc}</div> 
    
 </div>
   </body>
