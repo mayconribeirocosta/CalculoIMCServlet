@@ -1,4 +1,4 @@
-package mvc;
+8package mvc;
 
 import static java.lang.System.out;
 
@@ -6,13 +6,13 @@ public class CalculoIMCModel {
 
    
 	
-	private float altura;
+	    private float altura;
         private float peso;
         private float imc;
 
 	public CalculoIMCModel(float altura, float peso) {
 		this.altura = altura;
-                this.peso = peso;
+        this.peso = peso;
 	}
      
     public float getAltura() {
@@ -55,30 +55,31 @@ public class CalculoIMCModel {
     
         
 
-	public Float calcularimc(float imc) {
+	public Float calcularimc() {
              
-            imc = peso/ (altura*altura);
+            float imc = peso/ (altura*altura);
           
                return imc;  
         }
-        public String condicaoIMC (String condicao){ 
-			imc = peso/ (altura*altura);
+        public String condicaoIMC (float imc){ 
+		 
+            String condicao = "";
             
             if(imc < 18.5)  { 
-                 condicao = "Voce est· abaixo do peso"; 
+                 condicao = "Voce est√° abaixo do peso"; 
             
                
             }
             else  if(imc >= 18.5 && imc < 25) {  
-                 condicao = "Voce est· no peso normal"; 
+                 condicao = "Voce est√° no peso normal"; 
                 
             }  
             else  if(imc >= 25 && imc < 30)  {  
-                 condicao = "Voce est· acima do peso";  
+                 condicao = "Voce est√° acima do peso";  
                    
             }  
             else  if(imc >= 30)  {  
-                 condicao = "Voce est· obeso";  
+                 condicao = "Voce est√° obeso";  
                         
             }
                return condicao;    
