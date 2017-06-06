@@ -1,4 +1,4 @@
-8package mvc;
+package mvc;
 
 import static java.lang.System.out;
 
@@ -9,10 +9,11 @@ public class CalculoIMCModel {
 	    private float altura;
         private float peso;
         private float imc;
+      
 
 	public CalculoIMCModel(float altura, float peso) {
 		this.altura = altura;
-        this.peso = peso;
+                this.peso = peso;
 	}
      
     public float getAltura() {
@@ -63,7 +64,7 @@ public class CalculoIMCModel {
         }
         public String condicaoIMC (float imc){ 
 		 
-            String condicao = "";
+        	String condicao = "";
             
             if(imc < 18.5)  { 
                  condicao = "Voce está abaixo do peso"; 
