@@ -28,7 +28,7 @@
         
 
         <div class="Altura">
-        <label for="altura" class"sr-only">Altura</label>
+        <label for="atura" class"sr-only">Altura</label>
        <input type="number" min=0 step=any name="altura" class="form-control"  placeholder="Digite a altura" required/>
         
 
@@ -40,11 +40,14 @@
         <br>
         <button class="btn btn-sm btn-primary">Calcular</button>
         <p>
-                    
+        
+               
         </fieldset>
+
  
         </div>
-              
+       
+       
       </form>
   
    </body>
