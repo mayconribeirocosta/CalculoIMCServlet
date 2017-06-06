@@ -67,20 +67,20 @@ public class CalculoIMCModel {
         	String condicao = "";
             
             if(imc < 18.5)  { 
-                 condicao = "Voce está abaixo do peso"; 
+                 condicao = "Voce esta abaixo do peso"; 
             
                
             }
             else  if(imc >= 18.5 && imc < 25) {  
-                 condicao = "Voce está no peso normal"; 
+                 condicao = "Voce esta no peso normal"; 
                 
             }  
             else  if(imc >= 25 && imc < 30)  {  
-                 condicao = "Voce está acima do peso";  
+                 condicao = "Voce esta acima do peso";  
                    
             }  
             else  if(imc >= 30)  {  
-                 condicao = "Voce está obeso";  
+                 condicao = "Voce esta obeso";  
                         
             }
                return condicao;    
