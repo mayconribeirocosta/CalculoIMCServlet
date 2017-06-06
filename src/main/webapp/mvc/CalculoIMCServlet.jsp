@@ -24,7 +24,7 @@
 
         <div class="Peso">
         <label for="peso" class"sr-only">Peso</label>
-        <input type="number" min=0 name="peso" class="form-control"   placeholder="Digite o peso" required autofocus/>
+        <input type="number" min=0 step=any name="peso" class="form-control"   placeholder="Digite o peso" required autofocus/>
         
 
         <div class="Altura">
