@@ -28,7 +28,7 @@
         
 
         <div class="Altura">
-        <label for="atura" class"sr-only">Altura</label>
+        <label for="altura" class"sr-only">Altura</label>
        <input type="number" min=0 step=any name="altura" class="form-control"  placeholder="Digite a altura" required/>
         
 
